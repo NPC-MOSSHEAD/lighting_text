@@ -1,36 +1,58 @@
-body{
+body {
   background-color: black;
   padding-bottom: 100px;
+  margin: 0;
 }
+
 .page-thunder-to-text {
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
 }
+
 .page-thunder-to-text canvas {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
+
 .page-thunder-to-text input {
   position: absolute;
   bottom: 50px;
-  left: 0;
-  right: 0;
-  display: block;
+  left: 50%;
+  transform: translateX(-50%);
   outline: none;
   background-color: rgba(38, 50, 56, 0.2);
   color: #ffffff;
   border: none;
-  width: 40px;
-  min-width: 500px;
-  margin: auto;
+  width: 90%;
+  max-width: 500px;
   height: 60px;
   line-height: 60px;
   font-size: 40px;
   padding: 0 20px;
   border-radius: 5px;
+  text-align: center;
 }
+
 .page-thunder-to-text input:hover, .page-thunder-to-text input:focus {
   border: 1px solid rgba(38, 50, 56, 0.6);
 }
+
 .page-thunder-to-text input::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 600px) {
+  .page-thunder-to-text input {
+    font-size: 24px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px;
+  }
 }
